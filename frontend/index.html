@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数トレゲーム - 計算タイムアタック</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>数トレゲーム</h1>
+            <p>10問の計算問題をできるだけ速く解こう！</p>
+        </header>
+
+        <main>
+            <!-- スタート画面 -->
+            <div id="startScreen" class="screen">
+                <div class="start-content">
+                    <h2>計算タイムアタックチャレンジ</h2>
+                    <p>足し算・引き算・掛け算の10問を解いてタイムを競おう！</p>
+                    <button id="startBtn" class="btn btn-primary">スタート</button>
+                </div>
+            </div>
+
+            <!-- ゲーム画面 -->
+            <div id="gameScreen" class="screen hidden">
+                <div class="game-header">
+                    <div class="progress">
+                        <span id="questionCount">1 / 10</span>
+                    </div>
+                    <div class="timer">
+                        <span id="timer">00:00</span>
+                    </div>
+                </div>
+                
+                <div class="question-container">
+                    <div id="question" class="question">1 + 1 = ?</div>
+                    <input type="number" id="answer" class="answer-input" placeholder="答えを入力" autofocus>
+                    <button id="submitBtn" class="btn btn-submit">解答</button>
+                </div>
+
+                <div class="feedback" id="feedback"></div>
+            </div>
+
+            <!-- 結果画面 -->
+            <div id="resultScreen" class="screen hidden">
+                <div class="result-content">
+                    <h2>クリア！</h2>
+                    <div class="result-time">
+                        <span id="finalTime">00:00</span>
+                    </div>
+                    
+                    <div class="name-input">
+                        <label for="playerName">名前を入力してください：</label>
+                        <input type="text" id="playerName" placeholder="あなたの名前" maxlength="20">
+                    </div>
+                    
+                    <div class="result-buttons">
+                        <button id="saveScoreBtn" class="btn btn-primary">スコアを保存</button>
+                        <button id="retryBtn" class="btn btn-secondary">もう一度挑戦</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ランキング画面 -->
+            <div id="rankingScreen" class="screen hidden">
+                <div class="ranking-content">
+                    <h2>世界ランキング TOP 5</h2>
+                    <div id="rankingList" class="ranking-list"></div>
+                    <button id="backToStartBtn" class="btn btn-secondary">スタート画面へ</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <button id="viewRankingBtn" class="btn btn-link">ランキングを見る</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
