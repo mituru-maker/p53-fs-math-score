@@ -1,5 +1,5 @@
 // API URLの設定
-const API_URL = "http://127.0.0.1:8000"; // ローカル確認用
+const API_URL = "https://p53-fs-math-score.onrender.com"; // ローカル確認用
 // const API_URL = "https://YOUR-BACKEND-URL.onrender.com"; // Renderデプロイ時にコメントアウトを解除
 
 // ゲーム状態
